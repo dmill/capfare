@@ -11,3 +11,9 @@ MVP
 - User can specify a maximum price for above information
 - Email notification when price is met
 - Twilio API integration for sending text alerts
+
+
+Setup
+------
+install phantomjs
+<pre>brew install phantomjs</pre>
