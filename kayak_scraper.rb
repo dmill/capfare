@@ -1,3 +1,4 @@
+
 module KayakScraper
 
   extend self
@@ -9,5 +10,4 @@ module KayakScraper
   def format_airports(departure, arrival)
     "#{departure}-#{arrival}"
   end
-
 end
