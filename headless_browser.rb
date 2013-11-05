@@ -5,8 +5,11 @@ module HeadlessBrowser
   extend self
 
   def new_session
+    Capybara.register_driver :poltergeist do |app|
+      Capybara::Poltergeist::Driver.new(app)
+    end
     Capybara.javascript_driver = :poltergeist
-
+    Capybara.current_driver = :poltergeist
     Capybara.default_selector = :xpath
 
     @session = Capybara::Session.new(:poltergeist)
@@ -15,9 +18,5 @@ module HeadlessBrowser
       "Mozilla/5.0 (Macintosh; Intel Mac OS X)" }
 
     @session
-  end
-
-  def html
-    session.html
   end
 end
