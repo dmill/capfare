@@ -1,7 +1,6 @@
+require "headless_browser"
 
-module KayakScraper
-
-  extend self
+class KayakScraper
 
   def format_date(month, day, year = DateTime.now.year)
     "#{year}-#{month}-#{day}"
